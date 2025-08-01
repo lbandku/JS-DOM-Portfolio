@@ -1,0 +1,538 @@
+/* Google Font Import - Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.3s ease;;
+}
+
+/* Main page formatting */
+    main{
+        margin-top: 100px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+/* Heading formatting */
+    h1 {
+        text-align: center;
+    }
+    h2 {
+        text-align: center;
+    }
+    h3 {
+        text-align: center;
+    }
+
+
+
+
+/* Colours -- :root makes the colors global so can be used throughout consistently */
+:root {
+    --body-color: #f5f5f5;
+    --nav-color: #73788C;
+    --side-nav: rgb(1, 7, 24);
+    --text-color: rgb(255, 255, 255);
+    --search-bar: rgb(242, 242, 242);
+    --search-text: rgb(1, 7, 24);
+}
+
+/* Formats page body */
+body {
+    height: 100vh;
+    background-color: var(--body-color);
+}
+
+/* Global colors for dark mode */
+body.dark {
+    --body-color: rgb(24, 25, 26);
+    --nav-color: rgb(36, 37, 38);
+    --side-nav: rgb(36, 37, 38);
+    color: rgb(255, 255, 255);
+    --search-bar: rgb(36, 37, 38);
+}
+
+/* Basic formatting for Nav Bar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 65px;
+    width: 100%;
+    background-color: var(--nav-color);
+}
+
+/* Basic formatting for Nav Bar in dark */
+body.dark nav {
+    border: 1px solid #393838;
+
+}
+
+/* Formats the Nav Menu Bar for desktop & mobile */
+nav .nav-bar {
+    position: relative;
+    height: 100%;
+    max-width: 1000px;
+    width: 100%;
+    background-color: var(--nav-color);
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Formats the Hamburger Icon & Menu SideBar that opens */
+nav .nav-bar .sidebarOpen {
+    color: var(--text-color);
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* Formats the Title of Nav Menu (Jax's Portfolio) */
+nav .nav-bar .logo a {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* Formats the Title of Nav Menu (Jax's Portfolio) for toggle */
+
+.menu .logo-toggle {
+    display: none;
+}
+
+/* Formats Nav Menu desktop; changes from vertical list to horizontal  */
+.nav-bar .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+/* Formats Nav Menu desktop  */
+.nav-bar .nav-links li {
+    margin: 0 5px;
+    list-style: none;
+}
+
+/* Formats Nav Menu: Home About Projects Contacts desktop & mobile */
+.nav-links li a {
+    position: relative;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Formats Nav Links */
+.nav-links li a::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.dark-light i, /* applies white color to sun & dark color to moon during transition*/
+.searchToggle i {
+    position: absolute;
+    color: var(--text-color);
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dark-light i.sun { /*Sun-Moon transition (see sun in light, see moon in dark)*/
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dark-light.active i.sun { /*moon option shows in light mode*/
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dark-light.active i.moon {  /*sun option shows in dark mode*/
+    opacity: 0;
+    pointer-events: none;
+}
+
+.searchToggle i.cancel{ /* Deleting this causes X to show up over sun & search bar to show up */
+    opacity: 0;
+    pointer-events: none;
+}
+
+.searchBox .search-field {  /* Don't delete; introduce search later */
+    position: absolute;
+    bottom: -85px;
+    right: 5px;
+    height: 50px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    background-color: var(--nav-color);
+    padding: 3px;
+    border-radius: 6px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.searchToggle.active ~ .search-field { /* Don't Delete - Search */
+    bottom: -74px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.search-field::before {   /* Don't Delete - Search */
+    content: '';
+    position: absolute;
+    right: 14px;
+    top: -4px;
+    height: 12px;
+    width: 12px;
+    background-color: var(--nav-color);
+    transform: rotate(-45deg);
+    z-index: -1;
+}
+
+.search-field input {  /* Don't Delete - Search */
+    height: 100%;
+    width: 100%;
+    padding: 0 45px 0 15px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--search-text);
+    background-color: var(--search-bar);
+}
+
+/* Mobile Nav SideBar */
+@media (max-width: 790px) {
+    nav .nav-bar .sidebarOpen{
+        display: block;
+    }
+
+    /* Formats SideBar Menu*/
+    .menu{
+        position: fixed;
+        height: 100%;
+        width: 320px;
+        left: -100%;
+        top: 0;
+        padding: 20px;
+        background-color: var(--side-nav);
+        z-index: 100;
+        transition: all 0.4s ease;
+    }
+
+    /* Allows Hamburger SideBar to Open */
+    nav.active .menu{
+        left: -0%;
+    }
+
+    /* Hamburger Nav SideBar formatting */
+    nav.active .nav-bar .navLogo a{
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    /* Formats Title for Hamburger Nav SideBar */
+    .menu .logo-toggle{
+        display: block;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Formats Hamburger SideBar Nav Close "button" ability */
+    .logo-toggle .siderbarClose{
+        color: var(--text-color);
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    /* Formats Hamburger SideBar Nav Menu formatting - changes to vertical (column) list */
+    .nav-bar .nav-links{
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
+    /* Formats Hamburger SideBar Nav Menu formatting */
+    .nav-links li a{
+        display: block;
+        margin-top: 15px;
+    }
+}
+
+
+.button{
+    top:50%;
+    margin: auto;
+    text-align: center;
+    background-color:#738C7B;
+    font-weight: bold;
+    padding: 1%;
+    border-radius: 15px;
+    
+    }
+
+.button:hover {
+      background-color: #AEBDB2;
+      transition: 0.7s;
+      border-radius: 1;
+      cursor: pointer;
+  }
+
+
+img {
+    display:block;
+  margin: auto;
+  max-width: 50%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px, rgb(51, 51, 51) 0px 0px 0px 1.5px;}
+
+
+
+/*About Section*/
+.about{
+    font-family: 'Roboto', sans-serif;
+    /*color: rgb(240, 248, 255);*/
+    display: flex;
+    flex:wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 50px auto;
+}
+
+/*Projects Section*/
+
+  .container {
+  display: flex; /* Establish the container as a grid */
+  flex-direction: column; /* Default for small screens */
+  /*grid-template-columns: repeat(3, 1fr); /* Create three equal-width columns */
+  grid-gap: 10px; /* (Optional) Add space between the columns */
+  justify-content: center; /* Centers horizontally */
+  align-items: center;
+}
+
+.item1 {
+  /* Add styling for individual sections (e.g., background color, padding) */
+  display: block;
+  width: 100%;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  background-color: #738C7B;
+  padding: 1rem;
+  height: auto;
+  flex: 1 375px;
+  border-radius: 15px;
+}
+
+.item2 {
+  /* Add styling for individual sections (e.g., background color, padding) */
+  width: 100%;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  background-color: #73788C;
+  padding: 1rem;
+  height: auto;
+  flex: 1 375px;
+  border-radius: 15px;
+}
+
+.item3 {
+  /* Add styling for individual sections (e.g., background color, padding) */
+  width: 100%;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  background-color: #8C7384;
+  padding: 1rem;
+  height: auto;
+  flex: 1 375px;
+  border-radius: 15px;
+}
+
+
+
+    .projbutton{
+    top:50%;
+    margin: auto;
+    text-align: center;
+    background-color: #8C8773;
+    font-weight: bold;
+    padding: 1%;
+    border-radius: 15px;
+    }
+
+    .projbutton:hover {
+    background-color: #C0BDB2;
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+
+
+/*Contact Form*/
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*body{
+    background-color: #le4d69;
+    
+}*/
+
+
+.contact-form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: 100px auto;
+}
+
+form{
+    width:40%;
+    margin:auto;
+}
+
+form h2{
+    font-size: 32px;
+    /*color: rgb(240, 248, 255);*/
+    margin-bottom: 25px;
+}
+
+.contact-form label{
+    font-size: 16px;
+    /*color:  rgb(240, 248, 255);*/
+}
+
+
+.contact-form input, 
+.contact-form textarea{
+    width:100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    outline-style: none;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: .4s ease;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px, rgb(51, 51, 51) 0px 0px 0px .5px;}
+
+
+
+.contact-form input:hover, 
+.contact.form textarea:hover{
+    border: 1px solid #36d66d;
+    color: #fff;
+    font-size: 17 px;
+    padding: 10px 20 px;
+    border:none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+.submitbutton{
+    background-color: #738C7B;
+    color:black;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border-radius: 15px;
+    top:50%;
+    margin: auto;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px, rgb(51, 51, 51) 0px 0px 0px 1.5px;}
+
+
+.submitbutton:hover{
+    background-color: #AEBDB2;
+    transition: 0.7s;
+    border-radius: 1;
+    cursor: pointer;
+}
+
+
+
+.contact.content{
+    width: 40%;
+    line-height: 1.5;
+}
+
+.contact.content h2{
+    color:#fff;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.contact-content p{
+    color: #bed485;
+    font-size: 16px;
+}
+
+@media screen and(max-width:768px){
+    .contact-form{
+        width: 85%;
+        margin: 50px;
+        display: flex;
+        flex-direction: column;
+
+    }
+    form{
+        width:100%;
+    }
+    .contact-content{
+        width:100%;
+        margin-top: 25px;
+    }
+}
+
+
+
+
+
+/*Social Media*/
+.social-media{
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+/*Copyright*/
+.copyright{
+    text-align: center;
+}
+
+
+@media screen and (min-width: 768px) {
+    .container{
+    flex-direction: row;
+    }
+}

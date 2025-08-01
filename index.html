@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">  <!-- Links to CSS file -->
+        
+    <!-- Icons for Styling -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>  <!-- Links to Boxicon Icons -->
+
+    <title>Jax's Portfolio</title>  <!--Webpage Title -->
+
+</head>
+
+
+<main>
+<body>
+
+
+<section id ="home"></section>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>  <!-- Allows for Hamburger & SideBar for Mobile Menu -->
+            <span class="logo navLogo"><a href="#">Jax's Portfolio</a></span>  <!-- Places Title in NavBar -->
+            
+            <!-- SideBar -->
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">Jax's Portfolio</a></span> <!-- Places Title within SideBar Nav Menu-->
+                    <i class='bx bx-x siderbarClose'></i>  <!-- Displays the X for SideBar close icon -->
+                </div>
+
+                <!-- Site Navigation Jump-to Links -->
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about-section">About</a></li>
+                    <li><a href="#projects-section">Projects</a></li>
+                    <li><a href="#contact-form">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Dark/Light mode Sun/Moon Toggle Icons -->
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <!--<i class='bx bx-search search'></i>-->
+                   </div>
+
+                    <div class="search-field">   <!-- Can delete this section -->
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <!--Hero Section-->
+<section id ="hero-section">
+<div class="hero-section">
+  <!--<h1>Hero Section</h1>-->
+  <br>
+  <h1>Hello, I'm Jax.</h1>
+
+   <br> 
+  <!--Insert Headline Similar to LinkedIn-->
+  <h3 p>Website Designer | Software Developer | Tech Student</p>
+
+  <!--<h4 p>(Resize the browser window to see that this page is responsive.)</p>-->
+
+    <br>
+    <!--Button to Projects-->
+    <a href="#projects-section">
+        <button type="button" class="button">View Projects</button>
+    </a>
+    
+</div>
+</section>
+<br>
+<br>
+<br>
+
+
+<!--About Me Section-->
+<section id="about-section">
+<img src="/assets/project2.jpg" alt="Proj">
+<br>
+<br>
+<br>
+<br>
+
+
+
+<h1>About Me</h1>
+<div class="about">
+  
+  <h3 p>I'm currently pursuing an intensive Full Stack Developer training program for front-end and back-end development technologies, including HTML, CSS, JavaScript, Python MERN, REACT, Node.js, MangoDB, and more. </p>
+</div>
+</section>
+<br>
+<br>
+<br>
+
+
+<!--Projects Section-->
+<section id="projects-section">
+<h1>My Projects</h1>
+<br>
+
+ <div class="container">
+  <div class="column">
+    <div class="item1">
+      <img src="/assets/ai_gen_network.jpg" alt="REACTWx">
+      <div class="container">
+        <h3>Project #1:</h3>
+        <!--<p> class="title">Project #1 Title</p>-->
+        <h3>Description of Project #1.</h3>
+        <!-- <p>Insert Company Name?</p>-->
+        <p><button class="projbutton">View Project</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="item2">
+      <img src="/assets/ai_gen_network.jpg" alt="Proj2">
+      <div class="container">
+        <h3>Project #2:</h3>
+        <!--<p class="title">Project #2 Title</p>-->
+        <h3>Description of Project #2.</h3>
+        <!--<p>Insert Company Name?</p>-->
+        <p><button class="projbutton">View Project</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="item3">
+      <img src="/assets/ai_gen_network.jpg" alt="Proj3">
+      <div class="container">
+        <h3>Project #3:</h3>
+        <!--<p class="title">Project #3 Title</p>-->
+        <h3>Description of Project #3.</h3>
+        <!--<p>Insert Company Name?</p>-->
+        <p><button class="projbutton">View Project</button></p>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+<br>
+<br>
+
+<!--Contact Section-->
+<!--Insert Responsive Contact Form Here-->
+
+<section id="contact-form">
+<div class="contact-form">
+    <form>
+    <h2>Contact Me</h2>
+   
+    <div class="form-group">
+        <label for= "name">Name:</label>
+        <input type="text" name="name" required="">
+    </div>
+
+    <div class="form-group">
+        <label for= "email">Email:</label>
+        <input type="email" name="email" required="">
+    </div>
+
+    <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea name="message" rows="4" required=""></textarea>
+    </div>
+
+    <div>
+        <button class="submitbutton">Submit</button>
+    </div>
+</form>
+<!--<div class="contact-content">
+    <h2> Our Address</h2>
+    <p> Insert address here</p>
+    <p> Phone: insert ph num here</p>
+    <p> Email: insert email addy here</p>
+</div>-->
+
+</div>
+</section>
+<br>
+<br>
+<br>
+
+
+<!--Footer-->
+
+<!--Add Social Links-->
+<!--How-to Reference: https://www.w3schools.com/howto/howto_css_social_media_buttons.asp-->
+
+<footer>
+    <!--<h1>Social Media</h1>-->
+  <div class="footer">
+    <div class="social-media">
+      <a href="#" class="fa fa-linkedin"></a> <!-- LinkedIn Icon; link to LinkedIn Profile later -->
+  </div>
+
+<!-- Links to Social Media Icons -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<br>
+<br>
+
+<!--Copyright-->
+  </div>
+    <div class="copyright">
+      Handcrafted by Jax &#169 twentytwentyfive.  All rights reserved.
+    </div>
+  </div>
+</footer>
+<br>
+<br>
+
+
+
+
+
+<!-- JavaScript -->
+    <script src="apps.js"></script>  <!-- Links to JavaScript file -->
+
+<!-- Cursor Trail -->
+<script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+
+
+</body>
+</main>
+</html>
+
