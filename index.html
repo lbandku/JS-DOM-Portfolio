@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +8,14 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">  <!-- Links to CSS file -->
-        
+      
+    <!-- Link to Social Media Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   
     <!-- Icons for Styling -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>  <!-- Links to Boxicon Icons -->
 
@@ -17,10 +23,8 @@
 
 </head>
 
-
-<main>
 <body>
-
+<main>
 
 <section id ="home"></section>
     <nav>
@@ -32,7 +36,7 @@
             <div class="menu">
                 <div class="logo-toggle">
                     <span class="logo"><a href="#">Jax's Portfolio</a></span> <!-- Places Title within SideBar Nav Menu-->
-                    <i class='bx bx-x siderbarClose'></i>  <!-- Displays the X for SideBar close icon -->
+                    <i class='bx bx-x sidebarClose'></i>  <!-- Displays the X for SideBar close icon -->
                 </div>
 
                 <!-- Site Navigation Jump-to Links -->
@@ -68,19 +72,20 @@
 
 
 
-
     <!--Hero Section-->
 <section id ="hero-section">
 <div class="hero-section">
   <!--<h1>Hero Section</h1>-->
-  <br>
+  <br>    
+<h1 id="typewriter"></h1>
+    <br>
+    <br>
+    <br>
   <h1>Hello, I'm Jax.</h1>
 
    <br> 
-  <!--Insert Headline Similar to LinkedIn-->
-  <h3 p>Website Designer | Software Developer | Tech Student</p>
-
-  <!--<h4 p>(Resize the browser window to see that this page is responsive.)</p>-->
+  <!-- Headline Similar to LinkedIn-->
+  <h3>Website Designer | Software Developer | Tech Student</h3>
 
     <br>
     <!--Button to Projects-->
@@ -94,73 +99,60 @@
 <br>
 <br>
 
-
 <!--About Me Section-->
 <section id="about-section">
-<img src="/assets/project2.jpg" alt="Proj">
+<img src="/assets/project2.jpg" alt="Project Image">
 <br>
 <br>
 <br>
 <br>
-
 
 
 <h1>About Me</h1>
 <div class="about">
   
-  <h3 p>I'm currently pursuing an intensive Full Stack Developer training program for front-end and back-end development technologies, including HTML, CSS, JavaScript, Python MERN, REACT, Node.js, MangoDB, and more. </p>
+  <h3>I'm currently pursuing an intensive Full Stack Developer training program for front-end and back-end development technologies, including HTML, CSS, JavaScript, Python MERN, REACT, Node.js, MangoDB, and more. </h3>
 </div>
 </section>
 <br>
 <br>
 <br>
 
-
 <!--Projects Section-->
 <section id="projects-section">
-<h1>My Projects</h1>
-<br>
+  <h1>My Projects</h1>
+  <br>
 
- <div class="container">
-  <div class="column">
-    <div class="item1">
-      <img src="/assets/ai_gen_network.jpg" alt="REACTWx">
-      <div class="container">
+  <div class="container">
+    <div class="column">
+      <div class="item1">
+        <img src="/assets/ai_gen_network.jpg" alt="REACTWx Project Image">
         <h3>Project #1:</h3>
-        <!--<p> class="title">Project #1 Title</p>-->
         <h3>Description of Project #1.</h3>
-        <!-- <p>Insert Company Name?</p>-->
         <p><button class="projbutton">View Project</button></p>
       </div>
     </div>
-  </div>
 
-  <div class="column">
-    <div class="item2">
-      <img src="/assets/ai_gen_network.jpg" alt="Proj2">
-      <div class="container">
+    <div class="column">
+      <div class="item2">
+        <img src="/assets/ai_gen_network.jpg" alt="Project 2 Image">
         <h3>Project #2:</h3>
-        <!--<p class="title">Project #2 Title</p>-->
         <h3>Description of Project #2.</h3>
-        <!--<p>Insert Company Name?</p>-->
         <p><button class="projbutton">View Project</button></p>
       </div>
     </div>
-  </div>
 
-  <div class="column">
-    <div class="item3">
-      <img src="/assets/ai_gen_network.jpg" alt="Proj3">
-      <div class="container">
+    <div class="column">
+      <div class="item3">
+        <img src="/assets/ai_gen_network.jpg" alt="Project 3 Image">
         <h3>Project #3:</h3>
-        <!--<p class="title">Project #3 Title</p>-->
         <h3>Description of Project #3.</h3>
-        <!--<p>Insert Company Name?</p>-->
         <p><button class="projbutton">View Project</button></p>
       </div>
     </div>
   </div>
 </section>
+
 <br>
 <br>
 <br>
@@ -170,7 +162,7 @@
 
 <section id="contact-form">
 <div class="contact-form">
-    <form>
+    <form action="#" method="post">
     <h2>Contact Me</h2>
    
     <div class="form-group">
@@ -205,38 +197,26 @@
 <br>
 <br>
 
-
 <!--Footer-->
 
 <!--Add Social Links-->
 <!--How-to Reference: https://www.w3schools.com/howto/howto_css_social_media_buttons.asp-->
 
 <footer>
-    <!--<h1>Social Media</h1>-->
   <div class="footer">
     <div class="social-media">
-      <a href="#" class="fa fa-linkedin"></a> <!-- LinkedIn Icon; link to LinkedIn Profile later -->
-  </div>
-
-<!-- Links to Social Media Icons -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<br>
-<br>
-
-<!--Copyright-->
-  </div>
+      <a href="#" class="fa fa-linkedin"></a>
+    </div>
+    <br>
     <div class="copyright">
-      Handcrafted by Jax &#169 twentytwentyfive.  All rights reserved.
+      Handcrafted by Jax &#169; 2025. All rights reserved.
     </div>
   </div>
 </footer>
 <br>
 <br>
 
-
-
-
+</main>
 
 <!-- JavaScript -->
     <script src="apps.js"></script>  <!-- Links to JavaScript file -->
@@ -244,8 +224,6 @@
 <!-- Cursor Trail -->
 <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
 
-
 </body>
-</main>
 </html>
 
