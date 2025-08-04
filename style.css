@@ -1,3 +1,4 @@
+/*Main Page Styling */
 * {
     margin: 0;
     padding: 0;
@@ -16,13 +17,17 @@ main {
 /* Headings */
 h1, h2, h3 {
     text-align: center;
-    font-size: 2.4rem;  /* increased font size */
+    font-size: 2.4rem;
 }
 
-/* Colours (Global variables) */
+h4 {
+    text-align: center;
+}
+
+/* Global Colors */
 :root {
-    --body-color: #D7E4D9;
-    --nav-color: #73788C;
+    --body-color: rgb(215, 228, 217);
+    --nav-color: rgb(115, 120, 140);
     --side-nav: rgb(1, 7, 24);
     --text-color: rgb(255, 255, 255);
     --search-bar: rgb(242, 242, 242);
@@ -30,13 +35,15 @@ h1, h2, h3 {
     --shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px, rgb(51, 51, 51) 0px 0px 0px 1.5px;
 }
 
+/* Light Mode */
 body {
     height: 100vh;
     background-color: var(--body-color);
-    font-size: 18px;  /* increased base font size */
+    font-size: 18px;
     color: rgb(1, 7, 24); /* default text color for light mode */
 }
 
+/* Dark Mode Colors */
 body.dark {
     --body-color: rgb(24, 25, 26);
     --nav-color: rgb(36, 37, 38);
@@ -56,8 +63,9 @@ nav {
     z-index: 1000;
 }
 
+/* Dark Mode Nav Bar */
 body.dark nav {
-    border: 1px solid #393838;
+    border: 1px solid rgb(57, 56, 56);
 }
 
 nav .nav-bar {
@@ -104,11 +112,11 @@ nav .nav-bar .logo a {
 
 .nav-links li a {
     position: relative;
-    font-size: 20px;  /* increased font size */
+    font-size: 20px;
     font-weight: 400;
     color: var(--text-color);
     text-decoration: none;
-    padding: 12px 15px;  /* increased padding for better click area */
+    padding: 12px 15px;
     z-index: 10;
 }
 
@@ -136,6 +144,7 @@ nav .nav-bar .logo a {
     transition: opacity 0.4s ease;
 }
 
+/* Sun Styling */
 .dark-light i.sun {
     opacity: 0;
     pointer-events: none;
@@ -146,21 +155,22 @@ nav .nav-bar .logo a {
     pointer-events: auto;
 }
 
+/* Moom */
 .dark-light.active i.moon {
     opacity: 0;
     pointer-events: none;
 }
 
-/* Add to your existing dark-light section */
 .dark-light i {
     transition: transform 0.4s ease; /* Smooth rotation transition */
 }
 
-/* Rotate the icons when dark mode is active */
+/* Rotate icons when dark mode is active */
 body.dark .dark-light .sun {
     transform: rotate(360deg);
 }
 
+/* Rotate icons when light mode is active */
 body.dark .dark-light .moon {
     transform: rotate(360deg);
 }
@@ -170,7 +180,7 @@ body.dark .dark-light .moon {
     pointer-events: none;
 }
 
-/* Search Field */
+/* Search Field Styling -- Stripped for now; add later once get it to work */
 .searchBox .search-field {
     position: absolute;
     bottom: -85px;
@@ -272,18 +282,18 @@ body.dark .dark-light .moon {
 /* Hero Section Button */
 .button {
     top: 50%;
-    background-color: #738C7B;
+    background-color: rgb(115, 140, 123);
     font-weight: bold;
     border-radius: 15px;
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
     text-align: center;
-    font-size: 18px; /* increased button font size */
+    font-size: 18px;
 }
 
 .button:hover {
-    background-color: #AEBDB2;
+    background-color: rgb(174, 189, 178);
     transition: 0.7s;
     border-radius: 15px;
     cursor: pointer;
@@ -330,14 +340,19 @@ img {
 
 /* Each Project Column */
 .column {
-    flex: 1 1 300px; /* flex-grow:1, flex-shrink:1, base width 300px */
-    max-width: 350px; /* max width so projects don't stretch too wide */
+    flex: 1 1 300px; 
+    max-width: 350px; 
     box-sizing: border-box;
 }
 
-/* Individual Project Item with Background Colors */
+/* Individual Project Items with Background Colors */
+.item1 h3, .item2 h3, .item3 h3 {
+    font-size: 1.5rem;
+    margin: 5px 0;
+}
+
 .item1 {
-    background-color: #738C7B;
+    background-color: rgb(115, 140, 123);
     padding: 15px;
     border-radius: 15px;
     box-shadow: var(--shadow);
@@ -347,7 +362,7 @@ img {
 }
 
 .item2 {
-    background-color: #73788C;
+    background-color: rgb(115, 120, 140);
     padding: 15px;
     border-radius: 15px;
     box-shadow: var(--shadow);
@@ -357,7 +372,7 @@ img {
 }
 
 .item3 {
-    background-color: #8C7384;
+    background-color: rgb(140, 115, 132);
     padding: 15px;
     border-radius: 15px;
     box-shadow: var(--shadow);
@@ -366,17 +381,12 @@ img {
     align-items: center;
 }
 
-.item1 h3, .item2 h3, .item3 h3 {
-    font-size: 1.5rem; /* smaller size */
-    margin: 5px 0;
-}
-
 /* Project Images */
 .item1 img, .item2 img, .item3 img {
-    width: 100%;         /* fill the container's width */
+    width: 100%;
     height: auto;        /* keep aspect ratio */
     border-radius: 10px;
-    object-fit: cover;   /* crop nicely if needed */
+    object-fit: cover;  
     margin-bottom: 10px;
 }
 
@@ -386,17 +396,17 @@ img {
     padding: 10px 20px;
     border-radius: 15px;
     font-weight: bold;
-    background-color: #8C8773;
+    background-color: rgb(140, 135, 115);
     color: black;
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-align: center;
     border: none;
-    font-size: 16px; /* slightly bigger button font */
+    font-size: 16px;
 }
 
 .projbutton:hover {
-    background-color: #C0BDB2;
+    background-color: rgb(192, 189, 178);
 }
 
 /* Contact Form */
@@ -430,7 +440,7 @@ form h2 {
     margin-bottom: 15px;
     outline: none;
     border-radius: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(204, 204, 204);
     transition: 0.4s ease;
     box-shadow: var(--shadow);
     font-size: 17px;
@@ -439,12 +449,13 @@ form h2 {
 
 .contact-form input:hover,
 .contact-form textarea:hover {
-    border: 1px solid #36d66d;
+    border: 1px solid rgb(54, 214, 109);
 }
 
+/* Contact Form Submit Button */
 .submitbutton {
-    background-color: #738C7B;
-    color: black;
+    background-color: rgb(115, 140, 123);
+    color: rgb(0, 0, 0);
     font-weight: bold;
     font-size: 17px;
     padding: 10px 20px;
@@ -458,7 +469,7 @@ form h2 {
 }
 
 .submitbutton:hover {
-    background-color: #AEBDB2;
+    background-color: rgb(174, 189, 178);
     transition: 0.7s;
 }
 
@@ -469,13 +480,13 @@ form h2 {
 }
 
 .contact-content h2 {
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-size: 32px;
     margin-bottom: 15px;
 }
 
 .contact-content p {
-    color: #bed485;
+    color: rgb(190, 212, 133);
     font-size: 16px;
 }
 
@@ -486,7 +497,7 @@ form h2 {
         margin: 50px auto;
         flex-direction: column;
     }
-
+ 
     form {
         width: 100%;
     }
@@ -510,12 +521,13 @@ form h2 {
 
 /* Typwriter Effect -- Blinking Cursor */
 #typewriter {
-  background: linear-gradient(90deg, transparent, rgba(115,140,123,0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(115, 140, 123, 0.3), transparent);
   background-size: 200% 100%;
   animation: shine 8s infinite;
-  font-size: 1.8rem; /* slightly larger text */
+  font-size: 1.8rem; 
 }
 
+/* Add Shine to TypeWriter Effect words */
 @keyframes shine {
   0% {
     background-position: 200% 0;
@@ -525,9 +537,10 @@ form h2 {
   }
 }
 
+/* Dark Mode Typewriter Effect words */
 body.dark #typewriter {
-  border-color: #bed485;
-  filter: drop-shadow(0 0 1px #bed485);
+  border-color: rgb(190, 212, 133);
+  filter: drop-shadow(0 0 1px rgb(190, 212, 133));
 }
 
 /* Smooth Scrolling */
@@ -536,3 +549,10 @@ html {
 }
 
 
+
+
+
+.avatar{
+    width: 40rem;
+    height: auto;
+}
