@@ -2,7 +2,7 @@
 const body = document.querySelector("body"), // Select the <body> element //
       nav = document.querySelector("nav"), // Select the <nav> element (for the sidebar) //
       modeToggle = document.querySelector(".dark-light"), // Dark/Light mode toggle button //
-      searchToggle = document.querySelector(".searchToggle"), // Search toggle (not currently used -- add in later version) //
+      searchToggle = document.querySelector(".searchToggle"), // Search toggle (add in later version -- get it to work) //
       sidebarOpen = document.querySelector(".sidebarOpen"), // Hamburger open button //
       sidebarClose = document.querySelector(".sidebarClose"); // Hamburger close button //
 
